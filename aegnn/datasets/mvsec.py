@@ -18,7 +18,7 @@ class MVSEC(NCaltech101):
     def __init__(self, batch_size: int = 64, shuffle: bool = True, num_workers: int = 8, pin_memory: bool = False,
                  transform: Optional[Callable[[Data], Data]] = None):
         super(MVSEC, self).__init__(batch_size, shuffle, num_workers, pin_memory=pin_memory, transform=transform)
-        self.dims = (120, 100)  # overwrite image shape
+        self.dims = (260, 346)  # overwrite image shape
         pre_processing_params = {"r": 3.0, "d_max": 32, "n_samples": 10000, "sampling": True}
         self.save_hyperparameters({"preprocessing": pre_processing_params})
 
